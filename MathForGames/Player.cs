@@ -7,7 +7,7 @@ namespace MathForGames
     class Player : Actor
     {
         public Player(float x, float y, char icon = ' ', ConsoleColor color = ConsoleColor.Blue)
-            : base(x,y,icon)
+            : base(x,y,icon,color)
         {
 
         }
@@ -15,6 +15,7 @@ namespace MathForGames
 
         public override void Update()
         {
+
             ConsoleKey keyPressed = Game.GetNextKey();
 
             switch (keyPressed)
