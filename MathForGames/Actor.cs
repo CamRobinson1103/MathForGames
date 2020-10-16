@@ -55,8 +55,10 @@ namespace MathForGames
 
         public virtual void Update()
         {
-            _position.X += _velocity.X;
-            _position.Y += _velocity.Y;
+            _velocity.X = 1;
+            float _magnitude = _velocity.GetMagnitude();
+             _velocity *= 5;
+            _magnitude = _velocity.GetMagnitude();
             _position.X = Math.Clamp(_position.X, 0, Console.WindowWidth - 1);
             _position.Y = Math.Clamp(_position.Y, 0, Console.WindowHeight - 1);
 
